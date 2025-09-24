@@ -3,8 +3,8 @@ import teamlogo from "../assets/teamlogo.png";
 const Navbar = () => {
   return (
     <div id="navbar">
-      <h1>Team Berlin is super cool!</h1>
       <img src={teamlogo}></img>
+      <h1>Kanban Board</h1>
     </div>
   );
 };
