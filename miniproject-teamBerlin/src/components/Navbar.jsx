@@ -7,7 +7,7 @@ const Navbar = () => {
       <Link to="/">
         <img src={teamlogo}></img>
       </Link>
-      <h1>Kanban Board</h1>
+      <button>About us </button>
     </div>
   );
 };

@@ -1,23 +1,30 @@
-import React from "react";
-import TaskCard from "../components/TaskCard";
+import React, { useState } from "react";
+import taskData from "../components/tasks.json";
+import Column from "../components/Column";
 
 const Dashboard = () => {
   const columns = [
-    { id: "todo", title: "TO DO" },
-    { id: "Inprogress", title: "IN PROGRESS" },
-    { id: "Done", title: "DONE" },
+    { id: "todo", status: "To Do" },
+    { id: "Inprogress", status: "In Progress" },
+    { id: "Done", status: "Done" },
   ];
 
+  const [task, setTask] = useState(taskData);
 
   return (
     <>
-      <div>Dashboard</div>
-      {/* 
-      
-      HEY CLAIRE WE UNCOMMENTED THIS BC IT WAS BREAKING AND WE DIDNT KNOW HOW TO FIX IT
-
-      columns.map((onecolumn)=>{ onecolumn.title  }   ) */}
-      <TaskCard />
+      <h1>Kanban Board</h1>
+      <div id="columns-container">
+        {columns.map((oneColumn) => {
+          return (
+            <Column
+              key={columns.id}
+              columnsArray={oneColumn}
+              task={taskData.filter((task) => task.status === oneColumn.status)}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
