@@ -1,3 +1,19 @@
+body {
+  background-color: rgb(10, 150, 155);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
 #navbar {
   display: flex;
   max-height: 40px;
@@ -7,15 +23,14 @@
   width: 40px;
 }
 
-body {
-  background-color: rgb(10, 150, 155);
-}
-
 .task-card {
   background-color: aliceblue;
-  max-width: 200px;
+  max-width: 250px;
   border-radius: 10px;
-  padding: 15px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
   text-align: left;
   margin: 10px;
   align-items: center;
@@ -23,10 +38,46 @@ body {
 
 .task-card-priority {
   background-color: rgb(236, 140, 124);
-  max-width: 200px;
+  max-width: 250px;
   border-radius: 10px;
-  padding: 15px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
   text-align: left;
   margin: 10px;
   align-items: center;
+}
+
+.task-card-upper-middle-section  {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+}
+
+.task-card-lower-middle-section  {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+}
+
+.task-card-bottom-section  {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+}
+
+.delete-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(205, 77, 77);
+  background-color: #fff
+}
+
+.delete-btn:hover {
+  width: 42px;
+  height: 42px;
+  background-color:  rgba(190, 102, 102, 0.413);
 }
