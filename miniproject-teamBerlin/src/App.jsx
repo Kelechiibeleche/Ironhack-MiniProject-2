@@ -8,17 +8,28 @@ import Dashboard from "./pages/Dashboard";
 import Detailcard from "./pages/Detailcard";
 import Notfound from "./pages/Notfound";
 import AboutPage from "./pages/AboutPage";
+import CreateCard from "./pages/CreateCard";
+import taskData from "./components/tasks.json";
+import { useState } from "react";
 
 function App() {
   console.log("hello the website is working");
+  const [task, setTask] = useState(taskData);
   return (
     <>
       <div className="homepage">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route
+            path="/"
+            element={<Dashboard task={task} setTask={setTask} />}
+          />
           <Route path="/cards/:detailscardId" element={<Detailcard />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route
+            path="/createcard"
+            element={<CreateCard task={task} setTask={setTask} />}
+          />
           <Route path="/notfound" element={<Notfound />} />
         </Routes>
         <Sidebar />

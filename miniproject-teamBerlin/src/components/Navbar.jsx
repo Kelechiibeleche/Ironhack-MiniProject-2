@@ -8,6 +8,9 @@ const Navbar = () => {
         <img src={teamlogo}></img>
       </Link>
       <button>About us </button>
+      <Link to={"/createcard"}>
+        <button>Create task</button>
+      </Link>
     </div>
   );
 };

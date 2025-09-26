@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import taskData from "../components/tasks.json";
 import Column from "../components/Column";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   const columns = [
     { id: "todo", status: "To Do" },
     { id: "Inprogress", status: "In Progress" },
     { id: "Done", status: "Done" },
   ];
 
-  const [task, setTask] = useState(taskData);
+  const { task, setTask } = props;
 
   return (
     <>
@@ -20,7 +20,9 @@ const Dashboard = () => {
             <Column
               key={columns.id}
               columnsArray={oneColumn}
-              task={taskData.filter((task) => task.status === oneColumn.status)}
+              task={task.filter((task) => task.status === oneColumn.status)}
+              setTask={setTask}
+              fullTask={task}
             />
           );
         })}

@@ -5,15 +5,6 @@ import React, { useState } from "react";
 const TaskCard = () => {
   const [task, setTask] = useState(taskData);
 
-  function handleDelete(taskId) {
-    const filteredTasks = task.filter((task) => {
-      if (task.id !== taskId) {
-        return true;
-      }
-    });
-    setTask(filteredTasks);
-  }
-
   return (
     <div>
       {task.map((oneTask) => {
