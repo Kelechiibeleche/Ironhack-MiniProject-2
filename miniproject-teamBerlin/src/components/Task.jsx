@@ -1,7 +1,7 @@
+import { useDraggable } from "@dnd-kit/core";
 import React from "react";
 
 const Task = (props) => {
-  console.log(props);
   const { onetask, handleDelete } = props;
   const {
     id,
@@ -14,9 +14,29 @@ const Task = (props) => {
     priority,
   } = props.onetask;
 
+  const dragID = String(id);
+
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id: dragID,
+  });
+  const style = transform
+    ? { transform: `translate(${transform.x}px,${transform.y}px)` }
+    : undefined;
+
   return (
-    <div className={priority === "High" ? "task-card-priority" : "task-card"}>
-      <div class="task-card-title-section">
+    <div
+      ref={setNodeRef}
+      className={priority === "High" ? "task-card-priority" : "task-card"}
+    >
+      <div className="task-card-title-section">
+        <div
+          {...listeners}
+          {...attributes}
+          className="drag-handle"
+          style={{ cursor: "grab", padding: "4px" }}
+        >
+          ⋮⋮ {/* Drag icon */}
+        </div>
         <h4> {title}</h4>
         <h5>{description}</h5>
         <hr></hr>
@@ -44,7 +64,8 @@ const Task = (props) => {
         </h5>
         <button
           className="delete-btn"
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             handleDelete(id);
           }}
         >

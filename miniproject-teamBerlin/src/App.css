@@ -109,11 +109,12 @@ form label input {
   margin: 20px;
   overflow-x: auto;
   background-color: gainsboro;
-  height: 500px;
+  height: 2000px;
 }
 
 #single-column {
   background-color: gray;
   width: 300px;
   text-align: center;
+  height: 1000px;
 }
