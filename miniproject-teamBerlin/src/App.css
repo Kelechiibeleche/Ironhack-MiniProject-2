@@ -116,5 +116,16 @@ form label input {
   background-color: gray;
   width: 300px;
   text-align: center;
-  height: 1000px;
+  height: 1000px; 
+
+/* ^^^ maybe height should always be 100vh so that it's always as high as as the browser window and not arbitraily 1000px */
+
 }
+
+/* 
+STYLING TO DO'S
+
+1) margin-right on task cards or padding-right on columns should be same as the spacing on the cards' left
+2) draggable area (task card title section?) – maybe visual indicator across the whole section rather than just top left corner
+
+*/

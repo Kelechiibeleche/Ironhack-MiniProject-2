@@ -1,5 +1,6 @@
 import { useDraggable } from "@dnd-kit/core";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Task = (props) => {
   const { onetask, handleDelete } = props;
@@ -42,7 +43,7 @@ const Task = (props) => {
         <hr></hr>
       </div>
 
-      <div class="task-card-upper-middle-section">
+      <div className="task-card-upper-middle-section">
         <h5>👤{assignee}</h5>
         <h5>{priority}</h5>
       </div>
@@ -62,6 +63,9 @@ const Task = (props) => {
             ? "In Progress 🕣"
             : "To Do ⚠️"}
         </h5>
+        <Link to={`/editcard/${id}`}>
+          <button>Edit </button>
+        </Link>
         <button
           className="delete-btn"
           onClick={(e) => {
