@@ -29,7 +29,6 @@ const TaskCard = () => {
 
               <div class="task-card-lower-middle-section">
                 <h5>Created: {oneTask.createdDate} </h5>
-                <span></span>
                 <h5> Due: {oneTask.dueDate}</h5>
                 <hr></hr>
               </div>
@@ -49,6 +48,15 @@ const TaskCard = () => {
                   }}
                 >
                   🗑️
+                </button>
+
+                <button
+                  className="edit-btn"
+                  onClick={() => {
+                    handleEdit(oneTask.id);
+                  }}
+                >
+                  ✏ EDIT
                 </button>
               </div>
             </section>
