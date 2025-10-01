@@ -1,8 +1,7 @@
 import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import TaskCard from "./components/TaskCard";
+
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 
