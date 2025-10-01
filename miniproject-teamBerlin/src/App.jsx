@@ -24,15 +24,18 @@ function App() {
             path="/"
             element={<Dashboard task={task} setTask={setTask} />}
           />
-
           <Route path="/about" element={<AboutPage />} />
+          <Route
+            path="/createcard"
+            element={<CreateCard task={task} setTask={setTask} />}
+          />
           <Route
             path="/editcard/:detailscardId"
             element={<EditCardPage task={task} setTask={setTask} />}
           />
+          <Route path="/aboutus" element={<AboutPage />} />
           <Route path="/notfound" element={<Notfound />} />
         </Routes>
-        <Sidebar />
 
         <Footer />
       </div>

@@ -29,7 +29,7 @@ const Column = (props) => {
           ref={setNodeRef}
           id="task"
           style={{
-            minHeight: "600px", // Ensure drop zone has height
+            minHeight: "1500px", // Ensure drop zone has height
             width: "100%",
             padding: "10px",
           }}

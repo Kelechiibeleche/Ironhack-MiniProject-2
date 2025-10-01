@@ -48,14 +48,13 @@ const Task = (props) => {
         <h5>{priority}</h5>
       </div>
 
-      <div class="task-card-lower-middle-section">
-        <h5>Created:{createdDate}</h5>
-        <span>/ </span>
-        <h5>Due:{dueDate}</h5>
+      <div className="task-card-lower-middle-section">
+        <h5>Created: {createdDate}</h5>
+        <h5>Due: {dueDate}</h5>
         <hr></hr>
       </div>
 
-      <div class="task-card-bottom-section">
+      <div className="task-card-bottom-section">
         <h5>
           {status === "Done"
             ? "Done ✅"
@@ -64,7 +63,7 @@ const Task = (props) => {
             : "To Do ⚠️"}
         </h5>
         <Link to={`/editcard/${id}`}>
-          <button>Edit </button>
+          <button className="edit-btn">✏️ Edit </button>
         </Link>
         <button
           className="delete-btn"
@@ -73,7 +72,7 @@ const Task = (props) => {
             handleDelete(id);
           }}
         >
-          🗑️
+          🗑️ DELETE
         </button>
       </div>
     </div>

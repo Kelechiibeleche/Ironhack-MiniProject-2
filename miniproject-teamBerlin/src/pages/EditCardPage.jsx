@@ -12,8 +12,6 @@ const EditCardPage = ({ task, setTask }) => {
     }
   });
 
-  console.log(theOneTaskEdit);
-
   const nav = useNavigate();
   const [title, setTitle] = useState(theOneTaskEdit.title);
   const [description, setDescription] = useState(theOneTaskEdit.description);
@@ -44,7 +42,7 @@ const EditCardPage = ({ task, setTask }) => {
       }
     });
 
-    setTask = updateTaskArray;
+    setTask(updateTaskArray);
     nav("/");
   }
 

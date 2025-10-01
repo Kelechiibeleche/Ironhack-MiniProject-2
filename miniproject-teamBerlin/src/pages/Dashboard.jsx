@@ -21,7 +21,7 @@ const Dashboard = (props) => {
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
-        distance: 8, // 8px of movement required before drag starts
+        distance: 5, // 8px of movement required before drag starts
       },
     })
   );
@@ -46,7 +46,7 @@ const Dashboard = (props) => {
 
   return (
     <>
-      <h1>Kanban Board</h1>
+      <h1>Bär Board</h1>
       <div id="columns-container">
         {/* wrap the column in the dndcontext */}
         <DndContext sensors={sensors} onDragEnd={handleDragend}>

@@ -15,6 +15,7 @@ const CreateCard = (props) => {
   const [dueDate, setDueDate] = useState("");
 
   const { task, setTask } = props;
+  console.log(task);
   function handleAddTask(event) {
     event.preventDefault();
 
